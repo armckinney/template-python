@@ -7,7 +7,7 @@ from snek_case.core import ConfigurationProvider
 def test_cannot_create() -> None:
     # Assemble / Act / Assert
     with pytest.raises(TypeError):
-        ConfigurationProvider()  # type: ignore
+        ConfigurationProvider()
 
 
 def test_can_subclass() -> None:

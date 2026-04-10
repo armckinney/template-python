@@ -38,31 +38,29 @@
 <br>
 
 <!-- Description -->
-Here is where you can you a much longer description of your project. You might include features and inspiration here.
+`template-python` is a starter repository for Python projects with a modern `src/` layout, test scaffolding, and deployment helpers.
 
 The `template-python` repository adds some nifty and time-saving features like:
 - *All of the benefits of [template-ubuntu](https://github.com/armckinney/template-ubuntu) PLUS..*
 - Various Python Development tools 
-  - Environments via Poetry
-  - Dependency Management via Poetry
-  - Static Type Linting via Mypy
-  - Format Linting via Flake8
-  - File Formatting via Black & Isort 
-  - Testing Framework via Pytest
+    - Environments and dependency management via `uv`
+    - Build backend via `uv_build`
+    - Static analysis and formatting via `ruff`
+    - Type checking via `ty`
+    - Testing Framework via Pytest
 - Github Python Workflows
-  - Linting
-  - Testing
+    - Linting
+    - Testing
 - Azure Container App Deployment
 - Template Files for
-  - Python Development Tool Initialization
-    - `mypy.ini`
-    - `.flake8`
-    - `pytest.ini`
-    - `conftest.py`
-  - Initial Python Project
-    - `/<project>/`
-    - `/tests/`
-    - `/docs/`
+    - Python Development Tool Initialization
+        - `pyproject.toml`
+        - `Makefile`
+        - `conftest.py`
+    - Initial Python Project
+        - `/src/<project>/`
+        - `/tests/`
+        - `/docs/`
 
 
 ### Quick Start
@@ -83,7 +81,7 @@ This will allow you to auto-magically replace the `template-repo` name in the te
 ./Initialize-TemplateRepository.ps1
 ```
 
-*Note:* The project parent directory should match the GitHub project name.
+*Note:* The project parent directory should match the GitHub repository name.
 
 4. ###### Clean up what you don't want:
 Some items you might want to get rid of/update:
@@ -97,5 +95,15 @@ This should update all of your badges, links, images, as well as run the inital 
 
 ### Usage
 
-It's as simple as making a new repository from this one and then follow the steps in the [Quick Start](#quick-start) section!
+Common local commands:
+
+```bash
+make format   # uv run ruff format .
+make lint     # uv run ruff check . && uv run ty check .
+make test     # uv run pytest .
+make build    # uv build
+make publish  # uv publish
+```
+
+You can also run tools directly with `uv run`, for example `uv run pytest tests/sneks/test_snek.py`.
 
