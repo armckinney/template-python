@@ -33,6 +33,7 @@ app.mount(
     name="config",
 )
 
+
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request) -> HTMLResponse:
     config = JsonConfigurationProvider(CONFIG_FILE)
