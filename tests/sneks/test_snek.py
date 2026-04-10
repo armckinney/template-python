@@ -10,7 +10,7 @@ class TestSnek(Snek):
 def test_cannot_create() -> None:
     # Assemble / Act / Assert
     with pytest.raises(TypeError):
-        Snek()  # type: ignore
+        Snek()
 
 
 def test_can_subclass() -> None:

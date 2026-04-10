@@ -1,6 +1,4 @@
-# Remove Everything
+# remove everything except specified
 **
-
-# Add back in required Dockerfile artifacts with '!./file'
-!./pyproject.toml
-!./poetry.lock
+!pyproject.toml
+!*.lock
