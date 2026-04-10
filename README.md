@@ -11,9 +11,6 @@
         <a href="https://github.com/armckinney/template-python/LICENSE">
             <img alt="License" src="https://img.shields.io/github/license/armckinney/template-python.svg" />
         </a>
-        <a href="https://github.com/armckinney/template-python/actions">
-            <img alt="Tests Passing" src="https://github.com/armckinney/template-python/workflows/CI/badge.svg" />
-        </a>
         <a href="https://codecov.io/gh/armckinney/template-python">
             <img alt="Code Coverage" src="https://codecov.io/gh/armckinney/template-python/branch/master/graph/badge.svg" />
         </a>
@@ -22,9 +19,6 @@
         </a>
         <a href="https://github.com/armckinney/template-python/pulls">
             <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/armckinney/template-python" />
-        </a>
-        <a href="https://stackshare.io/armck/template-python">
-            <img alt="StackShare.io" src="http://img.shields.io/badge/tech-stack-0690fa.svg?label=StackShare.io">
         </a>
     </p>
     <p>
@@ -65,16 +59,11 @@ The `template-python` repository adds some nifty and time-saving features like:
 
 ### Quick Start
 
-1. ###### Add DockerHub Secrets:
-Add `DOCKER_HUB_ID` & `DOCKER_HUB_ACCESS_TOKEN` to GitHub repository. This will allow you to benefit from the build/push workflows in [ci.yml](./.github/workflows/ci.yml).
-
-![](./ini/dockerhub_example.png)
-
-2. ###### Configure the init script:
+1. ###### Configure the init script:
 This will allow you make quick changes to the template files that format them specifically for your project.
 Do this by filling out the `.\ini\config\config.ini.json` with your own preferences.
 
-3. ###### Run the init script:
+2. ###### Run the init script:
 This will allow you to auto-magically replace the `template-repo` name in the template files as well as configure the `ProjectLogo` image.
 
 ```powershell
@@ -83,13 +72,13 @@ This will allow you to auto-magically replace the `template-repo` name in the te
 
 *Note:* The project parent directory should match the GitHub repository name.
 
-4. ###### Clean up what you don't want:
+3. ###### Clean up what you don't want:
 Some items you might want to get rid of/update:
 - `./ini/` directory and its contents
 - Description, Quick Start, and Usage in this `README` file
 - The lint / test jobs in `..github/workflows/ci.yml`
 
-5. ###### Commit and Push your changes to GitHub:
+4. ###### Commit and Push your changes to GitHub:
 This should update all of your badges, links, images, as well as run the inital CI workflow.
 
 
