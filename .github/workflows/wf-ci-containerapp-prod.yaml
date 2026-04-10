@@ -27,12 +27,12 @@ jobs:
     - name: Lint with ruff
       run: |
         uv run ruff check .
-	        
-    - name: Link with tf
+
+    - name: Lint with ty
       run: |
         uv run ty check .
 
-    - name: Link with ruff format
+    - name: Lint with ruff format
       run: |
         uv run ruff format --check .
 

@@ -50,7 +50,8 @@
 				"hashicorp.terraform",
 				"shd101wyy.markdown-preview-enhanced",
 				"janisdd.vscode-edit-csv",
-				"google.geminicodeassist"
+				"google.geminicodeassist",
+				"github.vscode-github-actions"
 			]
 		}
 	}
